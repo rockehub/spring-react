@@ -1,8 +1,11 @@
 import React, {Component} from "react";
+import UserForm from "./UserForm";
+import {getUserActions} from '../../actions/user/UserAction'
 
 
 class User extends Component {
     render() {
+
         let list = [
             {
                 name: "daniel",
@@ -16,9 +19,10 @@ class User extends Component {
 
         return (
             <div>
+                <UserForm></UserForm>
                 <table>
                     <tbody>
-                    {list.map((item,index) => {
+                    {list.map((item, index) => {
                         return <tr key={index}>
                             <td>{item.name}</td>
                             <td>{item.email}</td>
@@ -30,4 +34,5 @@ class User extends Component {
         )
     }
 }
-export default  User;
+
+export default User;
